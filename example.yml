@@ -48,8 +48,27 @@ categories:
     key:
       - chai
       - coffee
+    ke0y:
+      - chai
+      - coffee
   - name: 2
     key:
       - a
       - b
-      
+
+default_chai_base: &default_base #anchor
+  tea: black
+  water: 200
+  time: 5
+
+morning_chai:
+  <<: *default_base #gave reference of above
+  milk: yes #add some more fields
+
+zip_code: !!str 12345 #cast as a string 
+count: !!int "123" #casts as an int
+
+unique: !!set 
+  ? a 
+  ? b
+  ? c
