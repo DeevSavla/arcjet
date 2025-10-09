@@ -1,0 +1,55 @@
+#YML - Data serialization format , eg xml , json 
+
+version: 3.2
+#version of the service that you use eg:- docker, kubernetes and not yml version
+
+#strings
+
+comps: "this is a string"
+it: this is a string
+
+#for multi line string | or > is allowed
+
+department: |
+  it 
+  extc 
+  comps
+
+department_1: >
+  it 
+  extc 
+  comps
+
+#numbers
+total: 7
+per_day: 0xFF22FF
+
+#boolean & null
+is_hot: true #false
+add: yes #no
+instant: on #off
+sweetner: null
+milk: ~ #this is also null
+
+morning: 2025-01-15 08:30:01
+
+#List
+spices:
+  - ginger
+  - a 
+  - b
+  - true
+
+#old version 
+spices_1: [a,b,c]
+
+categories:
+  - name: a
+    key:
+      - chai
+      - coffee
+  - name: 2
+    key:
+      - a
+      - b
+      
